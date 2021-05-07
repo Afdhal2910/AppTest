@@ -32,10 +32,8 @@ class MainActivity : AppCompatActivity() {
         try {
             val inputStream: InputStream = assets.open("data.json")
             json = inputStream.bufferedReader().use{it.readText()}
-            Log.d("TEST ::", json)
 
             var jsonArray = JSONArray(json)
-
             for(i in 0..jsonArray.length()-1)
             {
                 var jsonObj = jsonArray.getJSONObject(i)
@@ -53,7 +51,6 @@ class MainActivity : AppCompatActivity() {
             jsonList.adapter = displayData
 
             jsonList.onItemClickListener = AdapterView.OnItemClickListener { adapterView, view, i, l ->
-                Toast.makeText(applicationContext, "Testt" + email[i], Toast.LENGTH_LONG).show()
                 val intent = Intent(applicationContext, MainActivity2::class.java)
                 intent.putExtra("first_name", firstName[i])
                 intent.putExtra("last_name", lastName[i])

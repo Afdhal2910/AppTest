@@ -18,8 +18,6 @@ class MainActivity2 : AppCompatActivity() {
     lateinit var email: TextView
     lateinit var phone: TextView
 
-
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main2)
@@ -35,8 +33,6 @@ class MainActivity2 : AppCompatActivity() {
             mLastName = bundle.getString("last_name")
             mEmail = bundle.getString("email")
             mPhone = bundle.getString("phone")
-
-            Log.d("JADI", mFirstName.toString())
 
             firstName.text = "First Name = " + mFirstName
             lastName.text = "Last Name = " + mLastName
